@@ -11,11 +11,11 @@ global:
     hostname: github.com
     account: validatedpatterns-demos
     username: validatedpatterns-demos
-    email: SOMEWHERE@EXAMPLE.COM
+    email: aeros@redhat.com
     dev_revision: main
 
   imageregistry:
-    account: hybridcloudpatterns
+    account: aeros
     hostname: quay.io
     type: quay
 
