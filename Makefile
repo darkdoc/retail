@@ -26,13 +26,3 @@ post-install:
 .PHONY: start-pipelines
 start-pipelines:
 	./scripts/start_pipelines.sh
-
-.PHONY: test
-test:
-	@make -f common/Makefile PATTERN_OPTS="-f values-global.yaml -f values-hub.yaml" test
-
-.PHONY: kubeconform
-kubeconform:
-	make -f common/Makefile KUBECONFORM_SKIP='-skip PostgresCluster,Kafka,KafkaMirrorMaker' CHARTS="$(wildcard charts/all/*)" kubeconform
-	make -f common/Makefile KUBECONFORM_SKIP='-skip Task,TaskRun,Pipeline,PipelineResource,PipelineRun' CHARTS="$(wildcard charts/hub/*)" kubeconform
-	make -f common/Makefile CHARTS="$(wildcard charts/store/*)" kubeconform
