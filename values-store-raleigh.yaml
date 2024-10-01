@@ -1,5 +1,6 @@
 clusterGroup:
   name: store-raleigh
+  isHubCluster: false
 
   namespaces:
     - landing-page
